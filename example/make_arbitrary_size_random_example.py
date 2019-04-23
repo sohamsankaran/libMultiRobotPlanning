@@ -45,5 +45,5 @@ if(args.num_obstacles > 0):
 for obstacle_num in xrange(args.num_obstacles):
     instance_dict['map']['obstacles'].append(make_unique_point(start_dests, end_dests))
 
-with open('new_instance_dim_'+str(args.num_rows)+'_'+str(args.num_cols)+'_with_'+str(args.num_agents)+'_agents_and_'+str(args.num_obstacles)+'_obstaces.yaml', 'w') as outfile:
+with open('../benchmark/soham_benchmarks/random_instance_dim_'+str(args.num_rows)+'_'+str(args.num_cols)+'_with_'+str(args.num_agents)+'_agents_and_'+str(args.num_obstacles)+'_obstacles.yaml', 'w') as outfile:
     yaml.dump(instance_dict, outfile, default_flow_style=False)
